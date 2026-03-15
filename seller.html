@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell an Item – Collectibles Auction House</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23C9963A'/><text y='.9em' font-size='72' x='12'>🏆</text></svg>">
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🏆</div>
+    <div class="logo-text"><span>Collectibles</span><span>Auction House</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Auctions</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="watchlist.html" class="watchlist-nav" id="watchlistNav">♡ Wishlist <span class="watchlist-count" id="watchlistCount">0</span></a>
+  </nav>
+</header>
+
+<section class="page seller-page">
+  <h1>🏷️ Sell Your Collectible</h1>
+  <p>Submit your item for our expert authentication and get listed in our next live auction. We handle everything from valuation to delivery.</p>
+
+  <div class="seller-steps">
+    <div class="seller-step"><span>1</span><p>Submit Details</p></div>
+    <div class="seller-step-line"></div>
+    <div class="seller-step"><span>2</span><p>Authentication</p></div>
+    <div class="seller-step-line"></div>
+    <div class="seller-step"><span>3</span><p>Go Live</p></div>
+    <div class="seller-step-line"></div>
+    <div class="seller-step"><span>4</span><p>Get Paid</p></div>
+  </div>
+
+  <form id="sellerForm" class="seller-form">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="itemName">Item Name *</label>
+        <input type="text" id="itemName" placeholder="e.g. Victorian Silver Pocket Watch" required>
+      </div>
+      <div class="form-group">
+        <label for="itemCategory">Category *</label>
+        <select id="itemCategory" required>
+          <option value="" disabled selected>Select a category</option>
+          <option>Coins & Currency</option>
+          <option>Paintings & Art</option>
+          <option>Stamps</option>
+          <option>Watches & Clocks</option>
+          <option>Weapons & Militaria</option>
+          <option>Jewellery</option>
+          <option>Furniture & Décor</option>
+          <option>Maps & Documents</option>
+          <option>Sculptures</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="startPrice">Starting Price (USD) *</label>
+        <input type="number" id="startPrice" placeholder="e.g. 250" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="reservePrice">Reserve Price (USD)</label>
+        <input type="number" id="reservePrice" placeholder="Minimum acceptable bid">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="itemAge">Approximate Age / Era</label>
+        <input type="text" id="itemAge" placeholder="e.g. 19th Century, 1920s, WWII era">
+      </div>
+      <div class="form-group">
+        <label for="itemCondition">Condition *</label>
+        <select id="itemCondition" required>
+          <option value="" disabled selected>Select condition</option>
+          <option>Mint / Uncirculated</option>
+          <option>Excellent</option>
+          <option>Very Good</option>
+          <option>Good</option>
+          <option>Fair / Used</option>
+          <option>Restored</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="itemDescription">Description *</label>
+      <textarea id="itemDescription" rows="4" placeholder="Describe your item — history, provenance, notable features, any markings or inscriptions..." required></textarea>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="itemPhotos">Upload Photos</label>
+      <div class="photo-upload-zone" id="photoUploadZone">
+        <input type="file" id="itemPhotos" accept="image/*" multiple style="display:none">
+        <div class="upload-prompt" onclick="document.getElementById('itemPhotos').click()">
+          <span class="upload-icon">📷</span>
+          <p>Click to upload photos <span>(JPG, PNG — up to 10 files)</span></p>
+        </div>
+        <div class="photo-previews" id="photoPreviews"></div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="sellerName">Your Name *</label>
+        <input type="text" id="sellerName" placeholder="Full name" required>
+      </div>
+      <div class="form-group">
+        <label for="sellerEmail">Email Address *</label>
+        <input type="email" id="sellerEmail" placeholder="your@email.com" required>
+      </div>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="sellerPhone">Phone Number</label>
+      <input type="tel" id="sellerPhone" placeholder="+91 98765 43210">
+    </div>
+
+    <div class="form-group full-width seller-terms">
+      <label class="checkbox-label">
+        <input type="checkbox" id="agreeTerms" required>
+        <span>I agree to the <a href="#">Terms & Conditions</a> and confirm this item is authentic to the best of my knowledge.</span>
+      </label>
+    </div>
+
+    <button type="submit" class="seller-submit">Submit for Authentication →</button>
+  </form>
+</section>
+
+<footer>© 2025 Collectibles Auction House. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>

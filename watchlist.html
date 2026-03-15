@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Watchlist – Collectibles Auction House</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23C9963A'/><text y='.9em' font-size='72' x='12'>🏆</text></svg>">
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🏆</div>
+    <div class="logo-text"><span>Collectibles</span><span>Auction House</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Auctions</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="watchlist.html" class="watchlist-nav" id="watchlistNav">♡ Wishlist <span class="watchlist-count" id="watchlistCount">0</span></a>
+  </nav>
+</header>
+
+<section class="page">
+  <h1>❤️ My Watchlist</h1>
+  <p>Items you've saved for quick access. Click any card to view details or place a bid.</p>
+  <div id="watchlistGrid" class="grid"></div>
+  <div id="watchlistEmpty" class="watchlist-empty" style="display:none;">
+    <div class="empty-icon">♡</div>
+    <h3>Your watchlist is empty</h3>
+    <p>Browse our live auctions and click the heart icon on items you love.</p>
+    <a href="product.html" class="empty-cta">Browse Auctions →</a>
+  </div>
+</section>
+
+<canvas id="confettiCanvas"></canvas>
+<footer>© 2025 Collectibles Auction House. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>

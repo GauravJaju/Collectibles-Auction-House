@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collectibles Auction House</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon via emoji SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23C9963A'/><text y='.9em' font-size='72' x='12'>🏆</text></svg>">
+</head>
+<body>
+
+<!-- Welcome Banner (auto-dismisses in 3s via JS) -->
+<div id="welcomeBanner">🏆 Welcome to Collectibles Auction House</div>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🏆</div>
+    <div class="logo-text">
+      <span>Collectibles</span>
+      <span>Auction House</span>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Auctions</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="watchlist.html" class="watchlist-nav" id="watchlistNav">♡ Wishlist <span class="watchlist-count" id="watchlistCount">0</span></a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Premium Collectibles Auction House</h1>
+  <p>Discover rare vintage collectibles and bid on authenticated items.</p>
+  <button onclick="window.location.href='product.html'">Browse Auctions</button>
+
+  <!-- Countdown Timer -->
+  <div class="countdown-wrapper">
+    <p class="countdown-label">🔴 Next Live Auction Starts In</p>
+    <div class="countdown" id="heroCountdown">
+      <div class="countdown-block">
+        <span id="cd-hours">00</span>
+        <small>Hours</small>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span id="cd-mins">00</span>
+        <small>Minutes</small>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span id="cd-secs">00</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Banner -->
+<section class="stats-banner">
+  <div class="stat-item">
+    <span class="stat-number" data-target="10000">0</span>
+    <span class="stat-suffix">+</span>
+    <p>Items Sold</p>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="5000">0</span>
+    <span class="stat-suffix">+</span>
+    <p>Collectors Worldwide</p>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="98">0</span>
+    <span class="stat-suffix">%</span>
+    <p>Satisfaction Rate</p>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="120">0</span>
+    <span class="stat-suffix">+</span>
+    <p>Countries Reached</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="features">
+  <h2>Why Choose Us</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>📈 Real-Time Bidding</h3>
+      <p>Live auctions with transparent, competitive bidding open to all.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Verified Items</h3>
+      <p>Every collectible is authenticated by our expert appraisers.</p>
+    </div>
+
+    <div class="card">
+      <h3>💳 Secure Payment</h3>
+      <p>Safe, encrypted, and fully protected transactions every time.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Global Shipping</h3>
+      <p>Items delivered worldwide with tracking and full insurance.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <h2>What Collectors Say</h2>
+  <p class="testimonials-sub">Trusted by thousands of collectors worldwide</p>
+  <div class="testimonials-carousel">
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I've been collecting coins for 30 years and this is hands-down the most trustworthy auction platform I've used. The authentication process is world-class."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div><strong>Rajesh Kumar</strong><span>Numismatist, Delhi</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Won a rare 1920s painting at an incredible price. Delivery was insured, packed perfectly, and arrived in pristine condition. Will absolutely bid again."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SP</div>
+          <div><strong>Sophie Patel</strong><span>Art Collector, Mumbai</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Sold three pieces through the seller portal — seamless process, fast authentication, and I received the best prices I've ever gotten for my militaria collection."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JM</div>
+          <div><strong>James Morrison</strong><span>Military Collector, London</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The live bidding experience is thrilling — the countdown, the watcher count, the gavel sound. It feels like a real auction room. Absolutely addictive!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AL</div>
+          <div><strong>Aiko Tanaka</strong><span>Vintage Watch Enthusiast, Tokyo</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Fantastic selection of stamps and maps. Customer support was very helpful when I had questions about provenance documents. Highly recommend."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MV</div>
+          <div><strong>Marco Vitale</strong><span>Philatelist, Milan</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="carouselPrev">&#8592;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="carouselNext">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- Seller CTA Banner -->
+<section class="seller-cta-banner">
+  <div class="seller-cta-content">
+    <div>
+      <h2>Have a Collectible to Sell?</h2>
+      <p>Submit your item for expert authentication and get it listed in our next live auction.</p>
+    </div>
+    <a href="seller.html" class="seller-cta-btn">Start Selling →</a>
+  </div>
+</section>
+
+<footer>© 2025 Collectibles Auction House. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>
