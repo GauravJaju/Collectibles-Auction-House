@@ -370,7 +370,7 @@ if (detailPage) {
     // Watch button
     document.getElementById('detailWatchBtn').addEventListener('click', () => {
       let list = getWL(), idx = list.indexOf(id), btn = document.getElementById('detailWatchBtn');
-      if (idx===-1) { list.push(id); btn.textContent='♥ Saved to Watchlist'; showToast('❤️ "'+item.title+'" added to Watchlist!'); }
+      if (idx===-1) { list.push(id); btn.textContent='♥ Saved to Wishlist'; showToast('❤️ "'+item.title+'" added to Watchlist!'); }
       else { list.splice(idx,1); btn.textContent='♡ Add to Watchlist'; showToast('🗑️ Removed from Watchlist.'); }
       saveWL(list); updateWLBadge();
     });
@@ -502,7 +502,7 @@ if (contactForm) {
           <li><a href="about.html">About Us</a></li>
           <li><a href="product.html">Live Auctions</a></li>
           <li><a href="service.html">Our Services</a></li>
-          <li><a href="watchlist.html">My Watchlist</a></li>
+          <li><a href="watchlist.html">My Wishlist</a></li>
           <li><a href="seller.html">Sell an Item</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
